@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- enter css link here, work on css in end, first thing is js-->
+<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <header class = "searchBar" id = "userInput">
+<!-- this will be displayed on top as search bar for cities, you may have to use appendchild search history in form of button or anchor tag to link another click back to place holder and search again-->
+<!-- or if city options are already given, in this section below the form enter search history and make sure you can select one and it will appear in placeholder of form to search and make a call again--> 
+<!-- worry about history part in end  and then css and colors for temperatures, do basic search first-->
+<form>
+    <h3>Please Enter the name of city for daily weather and foreast for five days, press Submit</h3>
+    <input type="text" id ="textEntry">
+    <button id = "textEntryBtn">Submit</button>
+</form>
+    </header>
+<section>
+    <div class = "displayWeather">
+        <h3 id = "dailyWeather"></h3>
+    <!-- display weather for today -->
+    </div>
+    <div class = "displayForecast">
+        <h3 id = "dailyForecast"></h3>
+        <!-- display forecast for 5 days, may use more divs and flexbox here to line up divs -->
+    </div>
+</section>
+
+
+<script src="./assets/js/script.js"></script>
+<!-- enter script tag -->
+</body>
+</html>
+<!-- 
+
+https://openweathermap.org/api
+
+Your Task 3rd party api call for weather making requests with specific parameters to a URL.  
+
+Use the OpenWeather API (Links to an external site.) to retrieve weather data for cities. The documentation includes a section called "How to start" that provides basic setup and usage instructions. You will use localStorage to store any persistent data.
+
+
+I WANT to see the weather outlook for multiple cities
+
+
+
+
+Acceptance Criteria
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+WHEN I view the UV index
+THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city
+
+mock up is available on assingment page
+
+
+
+
+
+ -->
