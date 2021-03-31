@@ -27,26 +27,29 @@ console.log(urlForecast);
     .then(data => { 
       // change below
      console.log(data.list[0].dt_txt);
-     document.getElementById("currentDate").innerHTML = "Date: " + data.list[0].dt_txt; 
-    //document.getElementById("dateForecastOne").innerHTML = "Date: " + data.list[8].dt_txt;
-    //document.getElementById("temperatureForecastOne").innerHTML = "Temperature: " + data.list[8].main.temp;
-    //document.getElementById("humidityForecastOne").innerHTML = "Humidity: " + data.list[8].main.humidity;
+     var DateTime = luxon.DateTime;
+     var date = (DateTime.now().toFormat("yyyy/MM/dd"));
+     document.getElementById("currentDate").innerHTML = date;
+     // document.getElementById("currentDate").innerHTML = "Date: " + data.list[0].dt_txt; 
+    document.getElementById("dateForecastOne").innerHTML = "Date: " + data.list[6].dt_txt;
+    document.getElementById("temperatureForecastOne").innerHTML = "Temperature: " + data.list[6].main.temp;
+    document.getElementById("humidityForecastOne").innerHTML = "Humidity: " + data.list[6].main.humidity;
 
-    //document.getElementById("dateForecastTwo").innerHTML = "Date: " + data.list[16].dt_txt;
-    //document.getElementById("temperatureForecastTwo").innerHTML = "Temperature: " + data.list.[16].main.temp;
-    //document.getElementById("humidityForecastTwo").innerHTML = "Humidity: " + data.list[16].main.humidity;
+    document.getElementById("dateForecastTwo").innerHTML = "Date: " + data.list[14].dt_txt;
+    document.getElementById("temperatureForecastTwo").innerHTML = "Temperature: " + data.list[14].main.temp;
+    document.getElementById("humidityForecastTwo").innerHTML = "Humidity: " + data.list[14].main.humidity;
     
-    //document.getElementById("dateForecastThree").innerHTML = "Date: " + data.list[24].dt_txt;
-    //document.getElementById("temperatureForecastThree").innerHTML = "Temperature: " + data.list[24].main.temp;
-    //document.getElementById("humidityForecastThree").innerHTML = "Humidity: " + data.list[24].main.humidity;
+    document.getElementById("dateForecastThree").innerHTML = "Date: " + data.list[22].dt_txt;
+    document.getElementById("temperatureForecastThree").innerHTML = "Temperature: " + data.list[22].main.temp;
+    document.getElementById("humidityForecastThree").innerHTML = "Humidity: " + data.list[22].main.humidity;
 
-    //document.getElementById("dateForecastFour").innerHTML = "Date: " + data.list[32].dt_txt;
-    //document.getElementById("temperatureForecastFour").innerHTML = "Temperature: " + data.list[32].main.temp;
-    //document.getElementById("humidityForecastFour").innerHTML = "Humidity: " + data.list[32].main.humidity;
-
-    //document.getElementById("dateForecastFive").innerHTML = "Date: " + data.list[40].dt_txt;
-    //document.getElementById("temperatureForecastFive").innerHTML = "Temperature: " + data.list[40].main.temp;
-    //document.getElementById("humidityForecastFive").innerHTML = "Humidity: " + data.list[40].main.humidity;
+    document.getElementById("dateForecastFour").innerHTML = "Date: " + data.list[30].dt_txt;
+    document.getElementById("temperatureForecastFour").innerHTML = "Temperature: " + data.list[30].main.temp;
+    document.getElementById("humidityForecastFour").innerHTML = "Humidity: " + data.list[30].main.humidity;
+    
+    document.getElementById("dateForecastFive").innerHTML = "Date: " + data.list[38].dt_txt;
+    document.getElementById("temperatureForecastFive").innerHTML = "Temperature: " + data.list[38].main.temp;
+    document.getElementById("humidityForecastFive").innerHTML = "Humidity: " + data.list[38].main.humidity;
    
   });
 
