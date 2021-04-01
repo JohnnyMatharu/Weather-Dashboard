@@ -1,0 +1,47 @@
+.searchBar
+{width: 18%;}
+
+.displayWeather
+{  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 82%; 
+}
+
+section 
+{  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 100%;
+}
+
+.sectionForecast
+{   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+width: 100%;
+}
+
+    .mini
+{
+    width: 20%;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.weatherToday
+{
+    height: 360px;
+}

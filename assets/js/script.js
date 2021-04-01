@@ -70,10 +70,10 @@ console.log(urlForecast);
 
       //  document.getElementById("dailyForecast").innerHTML = data;
    };
-//anotherFunction() to sort two types of data
-
-//displayData2() current data
-
-// displayData2() 5 days forecast
-
-//{ document.getElementById("dailyWeather").innerHTML = data.main.temp});
+// font awesome: check other gihum to use it
+//cloud: <i class="fas fa-cloud"></i>
+//sun: <i class="far fa-sun"></i>
+//cloud-sun-rain: <i class="fas fa-cloud-sun-rain"></i>
+//cloud-sun: <i class="fas fa-cloud-sun"></i>
+//cloud-showers-heavy: <i class="fas fa-cloud-showers-heavy"></i>
+//cloud rain: <i class="fas fa-cloud-rain"></i>

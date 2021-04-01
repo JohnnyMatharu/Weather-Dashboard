@@ -5,17 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+
+
 <!-- enter css link here, work on css in end, first thing is js-->
 <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-    <header class = "searchBar" id = "userInput">
+    <header><h1>Weatherboard</h1></header>
+ <section id = "userInput">
+<div class = "searchBar">
+
 <!-- this will be displayed on top as search bar for cities, you may have to use appendchild search history in form of button or anchor tag to link another click back to place holder and search again-->
 <!-- or if city options are already given, in this section below the form enter search history and make sure you can select one and it will appear in placeholder of form to search and make a call again--> 
 <!-- worry about history part in end  and then css and colors for temperatures, do basic search first-->
 <form>
     <!-- <h3>Please Enter the name of city and province for daily weather and forecast for five days, press Submit</h3> -->
-    <h3>Please Enter the name of city for daily weather and forecast for five days, press Submit</h3>
+    <h3>Enter city and Submit</h3>
    
     <p>Please enter name of city below:</p>
     <input type="text" id ="textCityEntry">
@@ -26,10 +34,16 @@
     <br>
     <button id = "textEntryBtn">Submit</button>
 </form>
-    </header>
-<section>
-    <h3>Today's current weather</h3>
-    <div class = "displayWeather">
+    
+</div>
+
+
+
+
+<div class = "displayWeather">
+<div class = "weatherToday">
+    <h3>Today's weather</h3>
+    
         <h3 id = "currentCity"></h3>
         <p id = "currentDate">Date:</p>
         <p id = "temperature">Temperature:</p>
@@ -38,47 +52,50 @@
     <p id = "uv">UV Index:</p>
         <!-- display weather for today -->
     </div>
-    <h3>Five-Day weather forecast</h3>
-    <div class = "displayForecast">
+
+    <h3>Forecast for coming 5 days </h3>
+   <div class = "sectionForecast">
+    <div class = "mini">
+        
         <!-- change below -->
-       <div>
         <p id = "dateForecastOne">Date & time:</p>
         <p id = "temperatureForecastOne">Temperature:</p>
     <p id = "humidityForecastOne">Humidity:</p>
    
         <!-- display forecast for 5 days, may use more divs and flexbox here to line up divs -->
     </div>
-    <div>
+    <div class = "mini">
 <p id = "dateForecastTwo">Date & time:</p>
 <p id = "temperatureForecastTwo">Temperature:</p>
 <p id = "humidityForecastTwo">Humidity:</p>
 
     </div>
-    <div>
+    <div class = "mini">
         <p id = "dateForecastThree">Date & time:</p>
         <p id = "temperatureForecastThree">Temperature:</p>
         <p id = "humidityForecastThree">Humidity:</p>
       
     </div>
-    <div>
+    <div class = "mini">
 <p id = "dateForecastFour">Date & time:</p>
 <p id = "temperatureForecastFour">Temperature:</p>
 <p id = "humidityForecastFour">Humidity:</p>
 
     </div>
-    <div>
+    <div class = "mini">
         <p id = "dateForecastFive">Date & time:</p>
         <p id = "temperatureForecastFive">Temperature:</p>
         <p id = "humidityForecastFive">Humidity:</p>
        
     </div>
     </div>
+</div>
 </section>
 
-
+<script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0/build/global/luxon.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="./assets/js/script.js"></script>
 <!-- enter script tag -->
-<script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0/build/global/luxon.min.js"></script>
 </body>
 </html>
 <!-- 
