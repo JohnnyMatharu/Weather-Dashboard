@@ -4,6 +4,18 @@ document.getElementById("textEntryBtn").addEventListener("click", enterRequest);
 function enterRequest(event){
     event.preventDefault();
 entry = document.getElementById("textCityEntry").value;
+
+const list = document.getElementById("searchHistory");
+
+let newLine = document.createElement('li');
+
+newLine.textContent = entry;
+
+list.appendChild(newLine);
+
+
+
+
 console.log(entry);
 //entryUV = document.getElementById("textProvinceEntry").value;
 
