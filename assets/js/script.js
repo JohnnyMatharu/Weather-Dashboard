@@ -1,3 +1,6 @@
+//var displayLineFixed = JSON.parse(localStorage.getItem("cityName")) || [];
+//document.getElementById("searchHistory").innerHTML=displayLineFixed;
+
 var entry = 0;
 document.getElementById("textEntryBtn").addEventListener("click", enterRequest);
 
@@ -12,6 +15,15 @@ let newLine = document.createElement('li');
 newLine.textContent = entry;
 
 list.appendChild(newLine);
+
+//store the entries here 
+
+//you need to save in array, then retrieve it getItem as above and then appendchild the array results
+
+//localStorage.setItem("cityName",JSON.stringify(entry));
+//var displayLine = JSON.parse(localStorage.getItem("cityName")) || [];
+//document.getElementById("searchHistory").innerHTML=displayLine;
+
 
 
 
