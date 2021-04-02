@@ -1,18 +1,48 @@
+var displayArr = JSON.parse(localStorage.getItem("cityArray")) || [];
+console.log(displayArr);
+
+//upto here all working fine, issue below and above var entry
+
+
+
+for( i=0; i < displayArr.length; i++)
+{
+
+const list = document.getElementById("searchHistory");
+
+let newLine = document.createElement('button');
+
+newLine.textContent = displayArr[i];
+
+list.appendChild(newLine);
+
+}
+
+
 //var displayLineFixed = JSON.parse(localStorage.getItem("cityName")) || [];
 //document.getElementById("searchHistory").innerHTML=displayLineFixed;
 
 var entry = 0;
+let entryArr = [];
 document.getElementById("textEntryBtn").addEventListener("click", enterRequest);
 
 function enterRequest(event){
     event.preventDefault();
 entry = document.getElementById("textCityEntry").value;
 
+entryArr.push(entry);
+console.log(entryArr);
+localStorage.setItem("cityName",JSON.stringify(entry));
+localStorage.setItem("cityArray",JSON.stringify(entryArr));
+
+var displayLine = JSON.parse(localStorage.getItem("cityName")) || [];
+
 const list = document.getElementById("searchHistory");
 
-let newLine = document.createElement('li');
+let newLine = document.createElement('button');
 
-newLine.textContent = entry;
+
+newLine.textContent = displayLine;
 
 list.appendChild(newLine);
 
@@ -20,8 +50,7 @@ list.appendChild(newLine);
 
 //you need to save in array, then retrieve it getItem as above and then appendchild the array results
 
-//localStorage.setItem("cityName",JSON.stringify(entry));
-//var displayLine = JSON.parse(localStorage.getItem("cityName")) || [];
+
 //document.getElementById("searchHistory").innerHTML=displayLine;
 
 
