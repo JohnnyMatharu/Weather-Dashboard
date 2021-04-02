@@ -48,6 +48,46 @@ function historyWeather(displayLine){
          .then(data => {
            console.log(data.data[0].uv);
            document.getElementById("uv").innerHTML = "UV Index: " + data.data[0].uv;
+           var uvIndex = Math.trunc(data.data[0].uv);
+console.log(uvIndex);
+
+
+           switch (uvIndex) {
+           
+           case 0:
+           $("#uv").addClass("bg-success").removeClass("uvSection").removeClass("bg-warning").removeClass("bg-danger");
+            break;
+           case 1:
+            $("#uv").addClass("bg-success").removeClass("uvSection").removeClass("bg-warning").removeClass("bg-danger");
+            break;
+           case 2:
+            $("#uv").addClass("bg-success").removeClass("uvSection").removeClass("bg-warning").removeClass("bg-danger");
+            break;
+           case 3:
+            $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+            break;
+           case 4:
+            $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+            break;
+           case 5:
+            $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+            break;
+           case 6:
+            $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+            break;
+           case 7:
+            $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+            break;
+           case 8:
+            $("#uv").addClass("bg-danger").removeClass("uvSection").removeClass("bg-success").removeClass("bg-warning");
+            break;
+           case 9:
+            $("#uv").addClass("bg-danger").removeClass("uvSection").removeClass("bg-success").removeClass("bg-warning");
+            break;
+           case 10: 
+            $("#uv").addClass("bg-danger").removeClass("uvSection").removeClass("bg-success").removeClass("bg-warning");
+            break;
+           }
            //enter date
          }); 
 
@@ -149,6 +189,46 @@ var urlUV = "https://api.weatherbit.io/v2.0/current?&city=" + entry + "&key=109c
         console.log(data.data[0].uv);
         document.getElementById("uv").innerHTML = "UV Index: " + data.data[0].uv;
         //enter date
+        var uvIndex = Math.trunc(data.data[0].uv);
+        console.log(uvIndex);
+        
+        switch (uvIndex) {
+           
+          case 0:
+          $("#uv").addClass("bg-success").removeClass("uvSection").removeClass("bg-warning").removeClass("bg-danger");
+           break;
+          case 1:
+           $("#uv").addClass("bg-success").removeClass("uvSection").removeClass("bg-warning").removeClass("bg-danger");
+           break;
+          case 2:
+           $("#uv").addClass("bg-success").removeClass("uvSection").removeClass("bg-warning").removeClass("bg-danger");
+           break;
+          case 3:
+           $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+           break;
+          case 4:
+           $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+           break;
+          case 5:
+           $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+           break;
+          case 6:
+           $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+           break;
+          case 7:
+           $("#uv").addClass("bg-warning").removeClass("uvSection").removeClass("bg-success").removeClass("bg-danger");
+           break;
+          case 8:
+           $("#uv").addClass("bg-danger").removeClass("uvSection").removeClass("bg-success").removeClass("bg-warning");
+           break;
+          case 9:
+           $("#uv").addClass("bg-danger").removeClass("uvSection").removeClass("bg-success").removeClass("bg-warning");
+           break;
+          case 10: 
+           $("#uv").addClass("bg-danger").removeClass("uvSection").removeClass("bg-success").removeClass("bg-warning");
+           break;
+          }
+
       }); 
 
 
