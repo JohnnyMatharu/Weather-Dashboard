@@ -46,7 +46,46 @@ function historyWeather(displayLine){
       console.log(urlUV);
        fetch(urlUV).then(response => response.json()) 
          .then(data => {
-           console.log(data.data[0].uv);
+           console.log(data.data[0].uv);   
+               console.log(data.data[0].weather.description);
+               var weatherCondition = data.data[0].weather.description;
+               
+
+           switch (weatherCondition) {
+           
+            case 'Clear sky':
+            document.getElementById("icon").innerHTML = "<i class='far fa-sun'></i>";
+            break;
+            case 'Overcast Clouds':
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud'></i>";
+            break;
+            case 'Overcast clouds':
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud'></i>";
+            break;
+            case 'Light rain':
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun-rain'></i>";
+            break;
+            case 'Few Clouds': 
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
+            break;
+            case 'Few clouds': 
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
+            break;
+            case 'Scattered Clouds':
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
+            break;
+            case 'Scattered clouds':
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
+            break;
+            case 'Heavy rain':
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-showers-heavy'></i>";
+            break;
+            case 'Light rain':
+            document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-rain'></i>";
+            break;
+            };
+
+
            document.getElementById("uv").innerHTML = "UV Index: " + data.data[0].uv;
            var uvIndex = Math.trunc(data.data[0].uv);
 console.log(uvIndex);
@@ -196,34 +235,34 @@ switch (weatherCondition) {
            
 case 'Clear sky':
 document.getElementById("icon").innerHTML = "<i class='far fa-sun'></i>";
-
+break;
 case 'Overcast Clouds':
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud'></i>";
-
+break;
 case 'Overcast clouds':
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud'></i>";
-
+break;
 case 'Light rain':
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun-rain'></i>";
-
+break;
 case 'Few Clouds': 
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
-
+break;
 case 'Few clouds': 
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
-
+break;
 case 'Scattered Clouds':
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
-
+break;
 case 'Scattered clouds':
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
-
+break;
 case 'Heavy rain':
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-showers-heavy'></i>";
-
+break;
 case 'Light rain':
 document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-rain'></i>";
-
+break;
 };
 
 document.getElementById("uv").innerHTML = "UV Index: " + data.data[0].uv;
