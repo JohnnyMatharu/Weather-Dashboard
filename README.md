@@ -9,7 +9,10 @@ https://github.com/JohnnyMatharu/Weather-Dashboard/tree/main
 
 
 # Screenshots
+https://github.com/JohnnyMatharu/Weather-Dashboard/blob/main/screenshotOne.png?raw=true
+https://github.com/JohnnyMatharu/Weather-Dashboard/blob/main/screenshotTwo.png?raw=true
 
 
 # Made by
 Johnny(Indermeet)Singh
+UTOR-VIRT-BO-FSF-PT-02-2021-U-B-MW
