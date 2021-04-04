@@ -171,6 +171,7 @@ console.log(urlWeather);
  fetch(urlWeather).then(response => response.json()) 
    .then(data => {
      console.log(data);
+    
      document.getElementById("currentCity").innerHTML = data.name;
      //enter date
      console.log(data.main.temp);
@@ -187,7 +188,45 @@ var urlUV = "https://api.weatherbit.io/v2.0/current?&city=" + entry + "&key=109c
     fetch(urlUV).then(response => response.json()) 
       .then(data => {
         console.log(data.data[0].uv);
-        document.getElementById("uv").innerHTML = "UV Index: " + data.data[0].uv;
+        console.log(data.data[0].weather.description);
+        var weatherCondition = data.data[0].weather.description;
+//Use above command for search of weather description for icon/picture display
+
+switch (weatherCondition) {
+           
+case 'Clear sky':
+document.getElementById("icon").innerHTML = "<i class='far fa-sun'></i>";
+
+case 'Overcast Clouds':
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud'></i>";
+
+case 'Overcast clouds':
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud'></i>";
+
+case 'Light rain':
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun-rain'></i>";
+
+case 'Few Clouds': 
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
+
+case 'Few clouds': 
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
+
+case 'Scattered Clouds':
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
+
+case 'Scattered clouds':
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-sun'></i>";
+
+case 'Heavy rain':
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-showers-heavy'></i>";
+
+case 'Light rain':
+document.getElementById("icon").innerHTML = "<i class='fas fa-cloud-rain'></i>";
+
+};
+
+document.getElementById("uv").innerHTML = "UV Index: " + data.data[0].uv;
         //enter date
         var uvIndex = Math.trunc(data.data[0].uv);
         console.log(uvIndex);
@@ -268,11 +307,4 @@ console.log(urlForecast);
   });
 };
       //  document.getElementById("dailyForecast").innerHTML = data;
-   
-// font awesome: check other gihum to use it
-//cloud: <i class="fas fa-cloud"></i>
-//sun: <i class="far fa-sun"></i>
-//cloud-sun-rain: <i class="fas fa-cloud-sun-rain"></i>
-//cloud-sun: <i class="fas fa-cloud-sun"></i>
-//cloud-showers-heavy: <i class="fas fa-cloud-showers-heavy"></i>
-//cloud rain: <i class="fas fa-cloud-rain"></i>
+
