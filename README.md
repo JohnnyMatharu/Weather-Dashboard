@@ -6,7 +6,7 @@ Many transport companies nowadays looking for weather updates from reliable sour
 
 This assignment is about Weatherboard that will show the weather of cities when entered in the search bar, current weather with the displayed for current day with the image of weather condition as an icon. Forecast for coming five days is also displayed underneath. After searched, city is saved in memory to search later.
 
-Tools used are web APIs
+Tools used are HTML, CSS, and web APIs
 
 # Link
 https://johnnymatharu.github.io/Weather-Dashboard/
